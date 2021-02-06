@@ -40,19 +40,19 @@
 
     <ul class="sidenav app-sidenav open">
       <li>
-        <a href="#" class="waves-effect waves-orange pointer">Счет</a>
+        <a href="/" class="waves-effect waves-orange pointer">Счет</a>
       </li>
       <li>
-        <a href="#" class="waves-effect waves-orange pointer">История</a>
+        <a href="/history" class="waves-effect waves-orange pointer">История</a>
       </li>
       <li>
-        <a href="#" class="waves-effect waves-orange pointer">Планирование</a>
+        <a href="/planning" class="waves-effect waves-orange pointer">Планирование</a>
       </li>
       <li>
-        <a href="#" class="waves-effect waves-orange pointer">Новая запись</a>
+        <a href="/record" class="waves-effect waves-orange pointer">Новая запись</a>
       </li>
       <li>
-        <a href="#" class="waves-effect waves-orange pointer">Категории</a>
+        <a href="/categories" class="waves-effect waves-orange pointer">Категории</a>
       </li>
     </ul>
 
@@ -64,7 +64,7 @@
 
     <div class="fixed-action-btn">
       <a class="btn-floating btn-large blue" href="#">
-        <i class="large material-icons">Add</i>
+        <i class="large material-icons">add</i>
       </a>
     </div>
   </div>
