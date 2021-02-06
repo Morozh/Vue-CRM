@@ -6,10 +6,10 @@
 
     <form class="form">
       <div class="input-field">
+        <label>Выберите категорию</label>
         <select>
           <option>name cat</option>
         </select>
-        <label>Выберите категорию</label>
       </div>
 
       <p>

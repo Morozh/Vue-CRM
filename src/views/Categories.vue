@@ -44,11 +44,11 @@
             </div>
 
             <form>
-              <div class="input-field" >
+              <div class="input-field">
+                <label>Выберите категорию</label>
                 <select>
                   <option>Category</option>
                 </select>
-                <label>Выберите категорию</label>
               </div>
 
               <div class="input-field">
