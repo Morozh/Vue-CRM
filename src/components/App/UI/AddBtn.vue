@@ -1,7 +1,7 @@
 <template>
   <div class="fixed-action-btn">
-    <a class="btn-floating btn-large blue" href="#">
+    <router-link class="btn-floating btn-large blue" to="/record">
       <i class="large purple darken-1 material-icons">add</i>
-    </a>
+    </router-link>
   </div>
 </template>

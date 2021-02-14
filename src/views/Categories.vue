@@ -16,8 +16,9 @@
                 <input
                     id="name"
                     type="text"
+                    class="inp inp-purple"
                 >
-                <label for="name">Название</label>
+                <label for="name" class="purple-text">Название</label>
                 <span class="helper-text invalid">Введите название</span>
               </div>
 
@@ -25,8 +26,9 @@
                 <input
                     id="limit"
                     type="number"
+                    class="inp inp-purple"
                 >
-                <label for="limit">Лимит</label>
+                <label for="limit" class="purple-text">Лимит</label>
                 <span class="helper-text invalid">Минимальная величина</span>
               </div>
 
@@ -52,17 +54,22 @@
               </div>
 
               <div class="input-field">
-                <input type="text" id="name">
-                <label for="name">Название</label>
+                <input 
+                  type="text" 
+                  id="name"
+                  class="inp inp-purple"
+                >
+                <label for="name" class="purple-text">Выберите категорию</label>
                 <span class="helper-text invalid">TITLE</span>
               </div>
 
               <div class="input-field">
                 <input
-                    id="limit"
-                    type="number"
+                  id="limit"
+                  type="number"
+                  class="inp inp-purple"
                 >
-                <label for="limit">Лимит</label>
+                <label for="limit" class="purple-text">Лимит</label>
                 <span class="helper-text invalid">LIMIT</span>
               </div>
 

@@ -40,8 +40,9 @@
         <input
           id="amount"
           type="number"
+          class="inp inp-purple"
         >
-        <label for="amount">Сумма</label>
+        <label for="amount" class="purple-text">Сумма</label>
         <span class="helper-text invalid">amount пароль</span>
       </div>
 
@@ -49,8 +50,9 @@
         <input
           id="description"
           type="text"
+          class="inp inp-purple"
         >
-        <label for="description">Описание</label>
+        <label for="description" class="purple-text">Описание</label>
         <span class="helper-text invalid">description пароль</span>
       </div>
 

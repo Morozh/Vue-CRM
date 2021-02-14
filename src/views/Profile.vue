@@ -9,8 +9,9 @@
         <input
           id="description"
           type="text"
+          class="inp inp-purple"
         >
-        <label for="description">Имя</label>
+        <label for="description" class="purple-text">Имя</label>
         <span class="helper-text invalid">name</span>
       </div>
 
