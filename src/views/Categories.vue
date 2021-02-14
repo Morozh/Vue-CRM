@@ -1,7 +1,7 @@
 <template>
   <div class="categories">
     <div class="page-title">
-      <h3>Категории</h3>
+      <h3 class="title">Категории</h3>
     </div>
     <section>
       <div class="row">
@@ -30,7 +30,7 @@
                 <span class="helper-text invalid">Минимальная величина</span>
               </div>
 
-              <button class="btn waves-effect waves-light" type="submit">
+              <button class="btn waves-effect waves-light " type="submit">
                 Создать
                 <i class="material-icons right">send</i>
               </button>

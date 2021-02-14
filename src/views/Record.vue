@@ -1,7 +1,7 @@
 <template>
   <div class="record">
     <div class="page-title">
-      <h3>Новая запись</h3>
+      <h3 class="title">Новая запись</h3>
     </div>
 
     <form class="form">

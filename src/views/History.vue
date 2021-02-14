@@ -1,7 +1,7 @@
 <template>
   <div class="history">
     <div class="page-title">
-      <h3>История записей</h3>
+      <h3 class="title">История записей</h3>
     </div>
 
     <div class="history-chart">
