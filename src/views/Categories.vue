@@ -14,9 +14,9 @@
             <form>
               <div class="input-field">
                 <input
-                    id="name"
-                    type="text"
-                    class="inp inp-purple"
+                  id="name"
+                  type="text"
+                  class="inp inp-purple"
                 >
                 <label for="name" class="purple-text">Название</label>
                 <span class="helper-text invalid">Введите название</span>
@@ -24,9 +24,9 @@
 
               <div class="input-field">
                 <input
-                    id="limit"
-                    type="number"
-                    class="inp inp-purple"
+                  id="limit"
+                  type="number"
+                  class="inp inp-purple"
                 >
                 <label for="limit" class="purple-text">Лимит</label>
                 <span class="helper-text invalid">Минимальная величина</span>
