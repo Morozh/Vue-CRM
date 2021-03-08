@@ -35,7 +35,7 @@
         >Введите пароль</small>
         <small 
           class="helper-text invalid"
-          v-if="$v.password.$dirty && !$v.password.minLength"
+          v-else-if="$v.password.$dirty && !$v.password.minLength"
         >Пароль не должен содержать менее {{$v.password.$params.minLength.min}} символов</small>
       </div>
     </div>
@@ -51,7 +51,7 @@
       </div>
 
       <p class="center">
-        Нет аккаунта?
+        Если у Вас нет аккаунта, обратитесь к администратору
         <router-link to="/register">Зарегистрироваться</router-link>
       </p>
     </div>
@@ -60,6 +60,7 @@
 
 <script>
 import { email, required, minLength } from 'vuelidate/lib/validators'
+import messages from '@/common/messages'
 
 export default {
   name: 'login',
@@ -75,6 +76,11 @@ export default {
     password: {
       minLength: minLength(8), 
       required
+    }
+  },
+  mounted() {
+    if (messages[this.$route.query.message]) {
+      this.$message(messages[this.$route.query.message]);
     }
   },
   methods: {
