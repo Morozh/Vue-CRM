@@ -1,7 +1,7 @@
 <template>
   <form class="card auth-card" @submit.prevent="submitHandler">
     <div class="card-content">
-      <span class="card-title">Домашняя бухгалтерия</span>
+      <span class="card-title">Система расчетов Galago</span>
       <div class="input-field">
         <input
           v-model.trim="email"
@@ -26,10 +26,17 @@
           id="password"
           type="password"
           class="inp inp-orange"
-         
+          :class="{invalid: ($v.password.$dirty && !$v.password.required) || ($v.password.$dirty && !$v.password.minLength)}"
         >
         <label class="orange-text" for="password">Пароль</label>
-        <small class="helper-text invalid">Password</small>
+        <small 
+          class="helper-text invalid"
+          v-if="$v.password.$dirty && !$v.email.required"
+        >Введите пароль</small>
+        <small 
+          class="helper-text invalid"
+          v-if="$v.password.$dirty && !$v.password.minLength"
+        >Пароль не должен содержать менее {{$v.password.$params.minLength.min}} символов</small>
       </div>
     </div>
     <div class="card-action">
@@ -66,7 +73,7 @@ export default {
       required
     },
     password: {
-      minLength: minLength(6), 
+      minLength: minLength(8), 
       required
     }
   },
@@ -76,7 +83,14 @@ export default {
         this.$v.$touch();
         return;
       }
-      this.$router.push('/')
+
+      const formData = {
+        email: this.email,
+        password: this.password
+      }
+
+      console.log(formData);
+      this.$router.push('/');
     }
   }
 }

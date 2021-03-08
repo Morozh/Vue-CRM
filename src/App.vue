@@ -26,4 +26,11 @@ export default {
 <style lang="scss">
 @import '~materialize-css/dist/css/materialize.min.css';
 @import 'assets/css/index.css';
+
+#app {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+
 </style>
