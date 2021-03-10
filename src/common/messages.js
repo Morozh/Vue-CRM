@@ -1,3 +1,7 @@
 export default {
     'logout': 'Вы вышли из системы',
+    'register': 'Вы успешно зарегистрировали нового пользователя',
+    'auth/user-not-found': 'Пользователь не найден',
+    'auth/wrong-password': 'Вы ввели неправильный пароль',
+    'auth/email-already-in-use': 'Данный Email уже зарегистрирован'
 }

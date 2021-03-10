@@ -46,6 +46,12 @@ export default {
     interval: null,
     dropdown: null
   }),
+  methods: {
+    async logout() {
+      await this.$store.dispatch('logout')
+      this.$router.push('/login?message=logout');
+    }
+  },
   mounted() {
     this.interval = setInterval(() => {
       this.date = new Date();
@@ -53,12 +59,6 @@ export default {
     this.dropdown = window.M.Dropdown.init(this.$refs.dropdown, {
       constrainWidth: false
     });
-  },
-  methods: {
-    logout() {
-      console.log('logout');
-      this.$router.push('/login?message=logout');
-    }
   },
   beforeDestroy() {
     clearInterval(this.interval);
