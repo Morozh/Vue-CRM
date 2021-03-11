@@ -1,7 +1,9 @@
 <template>
   <form class="card auth-card" @submit.prevent="submitHandler">
     <div class="card-content">
-      <span class="card-title">Система расчетов Galago</span>
+      <div class="card-title">
+        <img class="img img--full" src="@/assets/img/logo-small.png" alt="Galago" />
+      </div>
       <div class="input-field">
         <input
           v-model.trim="email"
@@ -98,7 +100,9 @@ export default {
       try {
         await this.$store.dispatch('login', formData);
         this.$router.push('/');
-      } catch (e) {}
+      } catch (e) {
+        console.log(e);
+      }
     }
   }
 }
