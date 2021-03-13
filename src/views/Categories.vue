@@ -39,6 +39,7 @@
             </form>
           </div>
         </div>
+
         <div class="col s12 m6">
           <div>
             <div class="page-subtitle">
@@ -84,3 +85,16 @@
     </section>
   </div>
 </template>
+
+<script>
+import CategoryCreate from '@/components/App/Category/CategoryCreate'
+import CategoryEdit from '@/components/App/Category/CategoryEdit'
+
+export default {
+  name: 'Categories',
+  components: {
+    CategoryCreate,
+    CategoryEdit
+  }
+}
+</script>

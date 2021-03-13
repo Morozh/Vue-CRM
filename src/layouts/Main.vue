@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import Navbar from '@/components/App/Navbar'
-import Sidebar from '@/components/App/Sidebar'
-import AddBtn from '@/components/App/UI/Buttons/AddBtn'
-import Loader from '../components/App/Loader.vue'
+import Navbar from '@/components/App/Navbar/Navbar'
+import Sidebar from '@/components/App/Sidebar/Sidebar'
+import AddBtn from '@/components/UI/Buttons/AddBtn'
+import Loader from '@/components/App/Loader/Loader.vue'
 
 export default {
   name: 'main',

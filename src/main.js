@@ -6,7 +6,7 @@ import store from './store'
 import dateFilter from '@/filters/date.filter'
 import currencyFilter from '@/filters/currency.filter'
 import messagePlugin from '@/common/message.plugin'
-import Loader from '@/components/App/Loader'
+import Loader from '@/components/App/Loader/Loader'
 import './registerServiceWorker'
 import 'materialize-css/dist/js/materialize.min'
 
@@ -35,7 +35,7 @@ firebase.initializeApp({
 
 let app;
 
-// Initialize Vue project if user the user exists
+// Initialize Vue project if the user exists
 firebase.auth().onAuthStateChanged(() => {
   if (!app){
     app = new Vue({

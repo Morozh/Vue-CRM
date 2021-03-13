@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import HomeBill from '@/components/App/UI/Cards/HomeBill'
-import HomeCurrency from '@/components/App/UI/Cards/HomeCurrency'
+import HomeBill from '@/components/App/Cards/HomeBill'
+import HomeCurrency from '@/components/App/Cards/HomeCurrency'
 
 export default {
   name: 'Home',
