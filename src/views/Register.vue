@@ -9,10 +9,10 @@
           v-model.trim="email"
           id="email"
           type="text"
-          class="inp inp-orange"
+          class="inp"
           :class="{invalid: ($v.email.$dirty && !$v.email.required) || ($v.email.$dirty && !$v.email.email)}"
         >
-        <label class="orange-text" for="email">Email</label>
+        <label class="black-text" for="email">Email</label>
         <small
           class="helper-text invalid"
           v-if="$v.email.$dirty && !$v.email.required"
@@ -27,10 +27,10 @@
           v-model.trim="password"
           id="password"
           type="password"
-          class="inp inp-orange"
+          class="inp"
           :class="{invalid: ($v.password.$dirty && !$v.password.required) || ($v.password.$dirty && !$v.password.minLength)}"
         >
-        <label class="orange-text" for="password">Пароль</label>
+        <label class="black-text" for="password">Пароль</label>
         <small 
           class="helper-text invalid"
           v-if="$v.password.$dirty && !$v.email.required"
@@ -45,10 +45,10 @@
           v-model.trim="name"
           id="name"
           type="text"
-          class="inp inp-orange"
+          class="inp"
           :class="{invalid: ($v.name.$dirty && !$v.name.required) || ($v.name.$dirty && !$v.name.minLength)}"
         >
-        <label class="orange-text" for="name">Имя</label>
+        <label class="black-text" for="name">Имя</label>
         <small 
           class="helper-text invalid"
           v-if="$v.name.$dirty && !$v.name.required"
