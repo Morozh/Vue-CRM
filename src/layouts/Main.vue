@@ -22,6 +22,7 @@ import Navbar from '@/components/App/Navbar/Navbar'
 import Sidebar from '@/components/App/Sidebar/Sidebar'
 import AddBtn from '@/components/UI/Buttons/AddBtn'
 import Loader from '@/components/App/Loader/Loader.vue'
+import messages from '@/common/messages'
 
 export default {
   name: 'main',
@@ -40,6 +41,16 @@ export default {
     }
 
     this.loading = false;
+  },
+  computed: {
+    error() {
+      return this.$store.getters.error;
+    }
+  },
+  watch: {
+    error(fbError) {
+      this.$error(messages[fbError.code] || 'Что-то пошло не так');
+    }
   }
 }
 </script>
