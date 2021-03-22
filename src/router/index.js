@@ -30,7 +30,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "categories" */ '../views/Categories.vue')
   },
   {
-    path: '/detail',
+    path: '/detail/:id',
     name: 'Detail',
     meta: { layout: 'Main', auth: true },
     component: () => import(/* webpackChunkName: "detail" */ '../views/Detail.vue')

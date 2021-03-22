@@ -49,8 +49,6 @@ export default {
     const records = await this.$store.dispatch('fetchRecords');
     const categories = await this.$store.dispatch('fetchCategories');
 
-    console.log(categories)
-
     this.categories = categories.map(cat => {
       const spend = records
         .filter(r => r.categoryId === cat.id)
