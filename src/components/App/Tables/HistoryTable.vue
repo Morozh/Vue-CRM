@@ -28,9 +28,9 @@
       </td>
       <td>
         <button 
+          v-tooltip="'Подробнее'"
           class="btn-small btn" 
           @click="$router.push(`/detail/${record.id}`)"
-          v-tooltip="'Подробнее'"
         >
           <i class="material-icons">open_in_new</i>
         </button>
