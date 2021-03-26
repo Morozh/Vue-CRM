@@ -43,7 +43,7 @@ export default {
     }
   },
   data: () => ({
-    currencies: ['RUB', 'USD', 'EUR']
+    currencies: ['RUB', 'USD', 'JPY']
   })
 }
 </script>

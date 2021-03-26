@@ -32,17 +32,20 @@ import HomeCurrency from '@/components/App/Cards/HomeCurrency'
 
 export default {
   name: 'Home',
+  components: {
+    HomeBill,
+    HomeCurrency
+  },
   data: () => ({
     loading: true,
     currency: null
   }),
   async mounted() {
     this.currency = await this.$store.dispatch('fetchCurrency');
+    console.log(this.currency);
+
+    
     this.loading = false;
-  },
-  components: {
-    HomeBill,
-    HomeCurrency
   },
   methods: {
     async refresh() {

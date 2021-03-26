@@ -27,11 +27,11 @@ export default {
     }
   },
   data: () => ({
-    currencies: ['RUB', 'USD', 'EUR']
+    currencies: ['RUB', 'USD', 'JPY']
   }),
   computed: {
     base() {
-      return this.$store.getters.info.bill / (this.rates['RUB'] / this.rates['EUR']);
+      return this.$store.getters.info.bill / (this.rates['RUB']);
     }
   },
   methods: {
