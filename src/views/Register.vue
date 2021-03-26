@@ -93,6 +93,9 @@ import messages from '@/common/messages'
 
 export default {
   name: 'register',
+  metaInfo: {
+    title: 'Регистрация'
+  },
   data: () => ({
     email: '',
     password: '',
@@ -136,6 +139,7 @@ export default {
 
       try {
         await this.$store.dispatch('register', formData);
+        this.$message('Регистрация прошла успешно');
         this.$router.push('/login');
       } catch(e) {
         console.log(e);

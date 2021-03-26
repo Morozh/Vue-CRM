@@ -96,6 +96,9 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'Record',
+  metaInfo: {
+    title: 'Новая запись'
+  },
   data: () => ({
     loading: true,
     select: null,

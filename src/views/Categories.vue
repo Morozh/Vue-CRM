@@ -31,6 +31,9 @@ import CategoryEdit from '@/components/App/Category/CategoryEdit'
 
 export default {
   name: 'Categories',
+  metaInfo: {
+    title: 'Категории'
+  },
   components: {
     CategoryCreate,
     CategoryEdit

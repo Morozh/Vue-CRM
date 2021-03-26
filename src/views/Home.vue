@@ -32,6 +32,9 @@ import HomeCurrency from '@/components/App/Cards/HomeCurrency'
 
 export default {
   name: 'Home',
+  metaInfo: {
+    title: 'Счет'
+  },
   components: {
     HomeBill,
     HomeCurrency

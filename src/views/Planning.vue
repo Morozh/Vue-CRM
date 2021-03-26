@@ -41,6 +41,9 @@ import currencyFilter from '@/filters/currency.filter'
 
 export default {
   name: 'Planning',
+  metaInfo: {
+    title: 'Планирование'
+  },
   data: () => ({
     loading: true,
     categories: []

@@ -54,7 +54,7 @@
 
       <p class="center">
         Если у Вас нет аккаунта, обратитесь к администратору
-        <router-link to="/register">Зарегистрироваться</router-link>
+        <!-- <router-link to="/register">Зарегистрироваться</router-link> -->
       </p>
     </div>
   </form>
@@ -66,6 +66,9 @@ import messages from '@/common/messages'
 
 export default {
   name: 'login',
+  metaInfo: {
+    title: 'Авторизация'
+  },
   data: () => ({
     email: '',
     password: ''
