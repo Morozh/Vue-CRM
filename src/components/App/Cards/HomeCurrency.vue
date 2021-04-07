@@ -20,7 +20,7 @@
             :key="cur"
           >
             <td>{{cur}}</td>
-            <td>{{rates[cur].toFixed(3)}}</td>
+            <td>{{rates[cur]}}</td>
             <td>{{date | date('date')}}</td>
           </tr>
           </tbody>
@@ -43,7 +43,7 @@ export default {
     }
   },
   data: () => ({
-    currencies: ['RUB', 'USD', 'JPY']
+    currencies: ['RUB', 'USD', 'EUR']
   })
 }
 </script>

@@ -27,7 +27,7 @@ export default {
     }
   },
   data: () => ({
-    currencies: ['RUB', 'USD', 'JPY']
+    currencies: ['RUB', 'USD', 'EUR']
   }),
   computed: {
     base() {
@@ -36,6 +36,7 @@ export default {
   },
   methods: {
     getCurrency(currency) {
+      console.log(this.rates[currency])
       return Math.floor(this.base * this.rates[currency]);
     }
   }

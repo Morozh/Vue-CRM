@@ -21,10 +21,9 @@ export default new Vuex.Store({
   },
   actions: {
     async fetchCurrency() {
-      // const key = process.env.VUE_APP_FIXERIO;
-      // const result = await fetch(`http://data.fixer.io/api/latest?access_key=${key}&symbols=USD,EUR,RUB`)
-      const result = await fetch(`https://api.exchangeratesapi.io/latest?symbols=USD,RUB,JPY`);
-
+      const key = process.env.VUE_APP_FIXERIO;
+      const result = await fetch(`https://api.currencyfreaks.com/latest?apikey=${key}&currency-symbols=USD,RUB,EUR`);
+      
       return await result.json();
     }
   },
