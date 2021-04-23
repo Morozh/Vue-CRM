@@ -52,7 +52,7 @@
         </button>
       </div>
 
-      <p class="center">
+      <p class="text-gray center">
         Если у Вас нет аккаунта, обратитесь к администратору
         <!-- <router-link to="/register">Зарегистрироваться</router-link> -->
       </p>
@@ -110,3 +110,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.text-gray {
+  color: rgb(181, 178, 178);
+  font-size: 12px;
+}
+</style>

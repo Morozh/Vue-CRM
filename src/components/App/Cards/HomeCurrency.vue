@@ -47,3 +47,10 @@ export default {
   })
 }
 </script>
+
+<style lang="scss" scoped>
+.card-title {
+  font-family: 'Roboto Medium', sans-serif;
+  font-weight: 500;
+}
+</style>
