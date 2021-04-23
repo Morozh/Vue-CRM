@@ -31,7 +31,7 @@ export default {
 <style lang="scss" scoped>
 .auth-content {
   width: 100%;
-  background-color: #000;
+  background-color: #FFF;
 }
 
 .lines {
@@ -46,11 +46,11 @@ export default {
 
 .line {
   position: absolute;
-  width: 1px;
+  width: 2px;
   height: 100%;
   top: 0;
   left: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba($color: #fff, $alpha: 1.0);
   overflow: hidden;
 
   &::after {
@@ -61,8 +61,8 @@ export default {
     width: 100%;
     top: -50%;
     left: 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-    animation: drop 7s 0s infinite;
+    background: linear-gradient(to top, #8e24aa, #ffffff 75%, #ffffff 100%);
+    animation: drop 4s 0s infinite;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
   }
@@ -110,15 +110,15 @@ export default {
 
 @keyframes drop {
   0% {
-    top: -50%;
+    top: 100;
   }
 
   50% {
-    top: 50%;
+    top: 100%;
   }
     
   100% {
-    top: 100%;
+    top: -50%;
   }
 }
 
