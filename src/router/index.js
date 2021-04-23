@@ -58,6 +58,30 @@ const routes = [
     name: 'Record',
     meta: { layout: 'Main', auth: true },
     component: () => import(/* webpackChunkName: "record" */ '../views/Record.vue')
+  },
+  {
+    path: '/projects',
+    name: 'Projects',
+    meta: { layout: 'Main', auth: true },
+    component: () => import(/* webpackChunkName: "record" */ '../views/Projects.vue')
+  },
+  {
+    path: '/documentation',
+    name: 'Documentation',
+    meta: { layout: 'Main', auth: true },
+    component: () => import(/* webpackChunkName: "record" */ '../views/Documentation.vue')
+  },
+  {
+    path: '/employee',
+    name: 'Employee',
+    meta: { layout: 'Main', auth: true },
+    component: () => import(/* webpackChunkName: "record" */ '../views/Employee.vue')
+  },
+  {
+    path: '/about',
+    name: 'About',
+    meta: { layout: 'Main', auth: true },
+    component: () => import(/* webpackChunkName: "record" */ '../views/About.vue')
   }
 ]
 

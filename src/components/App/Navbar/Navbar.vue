@@ -1,18 +1,18 @@
 <template>
-  <nav class="navbar purple darken-1">
+  <nav class="navbar white">
     <div class="nav-wrapper">
       <div class="navbar-left">
         <a href="#" @click.prevent="$emit('click')">
-          <i class="material-icons white-text">dehaze</i>
+          <i class="material-icons black-text">dehaze</i>
         </a>
-        <span class="white-text">{{date | date('datetime')}}</span>
+        <span class="navbar-timer black-text">{{date | date('datetime')}}</span>
       </div>
 
       <ul class="right hide-on-small-and-down">
         <li>
           <a
             ref="dropdown"
-            class="dropdown-trigger white-text"
+            class="dropdown-trigger black-text"
             href="#"
             data-target="dropdown"
           >
@@ -73,3 +73,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .navbar-timer {
+    font-family: 'Roboto Medium', sans-serif !important;
+    font-weight: 500;
+  }
+</style>
