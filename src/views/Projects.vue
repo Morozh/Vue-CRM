@@ -4,7 +4,7 @@
       <h3 class="title">Активные проекты компании</h3>
     </div>
     <section class="projects-list">
-      <div href="https://selvery.ru/" class="projects-item">
+      <div class="projects-item">
         <div class="projects-item__row">
           <div class="projects-item__img">
             <img src="@/assets/img/projects/selvery-landing-preview.png" alt="Selvery" />
@@ -16,14 +16,14 @@
               <br> адаптированного контента с непрерывным сбором
               <br> данных о процессе продажи.
             </div>
-            <a class="projects-item__link" href="#">
-              Перейти
+            <a class="projects-item__link" href="https://selvery.ru/" target="_blank">
+              <span class="projects-item__link-text">Перейти</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div href="https://selvery.ru/" class="projects-item">
+      <div class="projects-item">
         <div class="projects-item__row">
           <div class="projects-item__img">
             <img src="@/assets/img/projects/selvery-dashboard.svg" alt="Selvery Dashboard" />
@@ -33,14 +33,14 @@
             <div class="projects-item__description">
               Акселлератор таргетинговых продаж.
             </div>
-            <a class="projects-item__link" href="#">
-              Перейти
+            <a class="projects-item__link" href="https://app.selvery.ru" target="_blank">
+              <span class="projects-item__link-text">Перейти</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div href="https://selvery.ru/" class="projects-item">
+      <div class="projects-item">
         <div class="projects-item__row">
           <div class="projects-item__img">
             <img src="@/assets/img/projects/logo_domrf.svg" alt="Аренда ДОМ.РФ" />
@@ -52,14 +52,14 @@
               <br>Официальный договор аренды, понятные правила аренды.
               <br>Комфорт. Cовременная отделка, мебель и бытовая техника.
             </div>
-            <a class="projects-item__link" href="#">
-              Перейти
+            <a class="projects-item__link" href="https://аренда.дом.рф/" target="_blank">
+              <span class="projects-item__link-text">Перейти</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div href="https://selvery.ru/" class="projects-item">
+      <div class="projects-item">
         <div class="projects-item__row">
           <div class="projects-item__img">
             <img src="@/assets/img/projects/logo_cz.svg" alt="Честный знак" />
@@ -71,14 +71,14 @@
               <br>прослеживаемости товаров Центра развития перспективных технологий, 
               <br>созданного для реализация глобальных проектов в цифровой экономике.
             </div>
-            <a class="projects-item__link" href="#">
-              Перейти
+            <a class="projects-item__link" href="https://честныйзнак.рф/" target="_blank">
+              <span class="projects-item__link-text">Перейти</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div href="https://selvery.ru/" class="projects-item">
+      <div class="projects-item">
         <div class="projects-item__row">
           <div class="projects-item__img">
             <img src="@/assets/img/projects/logo_sber-premier.svg" alt="СБЕР Премьер" />
@@ -89,14 +89,14 @@
               СБЕР презентации для защита дома или квартиры.
               <br>Проект предназначен исключительно для планшетов.
             </div>
-            <a class="projects-item__link" href="#">
-              Перейти
+            <a class="projects-item__link" href="http://sbpres-premier.dev.alamics.ru/" target="_blank">
+              <span class="projects-item__link-text">Перейти</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div href="https://selvery.ru/" class="projects-item">
+      <div class="projects-item">
         <div class="projects-item__row">
           <div class="projects-item__img">
             <img src="@/assets/img/projects/logo_sber-fabrika.svg" alt="СБЕР Фабрика" />
@@ -106,14 +106,14 @@
             <div class="projects-item__description">
               СБЕР фабрика презентаций для менеджеров СберБанк.
             </div>
-            <a class="projects-item__link" href="#">
-              Перейти
+            <a class="projects-item__link" href="http://sbr-press.alamics.ru/" target="_blank">
+              <span class="projects-item__link-text">Перейти</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div href="https://selvery.ru/" class="projects-item">
+      <div class="projects-item">
         <div class="projects-item__row">
           <div class="projects-item__img">
             <img src="@/assets/img/projects/logo_svmed.svg" alt="Современная медицина" />
@@ -125,8 +125,8 @@
               <br>широкий спектр амбулаторнополиклини- ческих, диагностических и&nbsp;лечебных
               <br>услуг для взрослых и&nbsp;детей в&nbsp;городе Верещагино.
             </div>
-            <a class="projects-item__link" href="#">
-              Перейти
+            <a class="projects-item__link" href="https://svrmed.ru/" target="_blank">
+              <span class="projects-item__link-text">Перейти</span>
             </a>
           </div>
         </div>
@@ -199,6 +199,67 @@ export default {
       font-size: 16px;
       line-height: 20px;
       color: rgb(39, 39, 39);
+    }
+
+    &__link {
+      cursor: default;
+
+      &-text {
+        cursor: pointer;
+        width: max(128px, 100%);
+        height: max(32px, 32px);
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 500;
+        background-color: transparent;
+        color: #8e24aa;
+        padding: 4px 16px;
+        position: relative;
+        transition: all .3s;
+        
+        &:before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          bottom: 0;
+          left: 0;
+          border: 1px solid transparent;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          top: 0;
+          right: 0;
+          border: 1px solid transparent;
+        }
+
+        &:hover {
+          &:before {
+            height: 32px;
+            width: 100%;
+            max-width: 128px;
+            border-right: none;
+            border-bottom: none;
+            border-color: #8e24aa;
+            transition: height .3s ease,
+                        width .3s ease .3s;
+          }
+          &:after  {
+            height: 32px;
+            width: 100%;
+            max-width: 128px;
+            border-left: none;
+            border-top: none;
+            border-color: #8e24aa;
+            transition: height .3s ease,
+                        width .3s ease .3s;
+          }
+        }
+      }
     }
   }
 </style>
