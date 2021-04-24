@@ -62,7 +62,7 @@ export default {
     top: -50%;
     left: 0;
     background: linear-gradient(to top, #8e24aa, #ffffff 75%, #ffffff 100%);
-    animation: drop 4s 0s infinite;
+    animation: drop 3s 0s infinite;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
   }

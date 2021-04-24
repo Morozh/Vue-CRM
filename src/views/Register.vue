@@ -52,11 +52,29 @@
         <small 
           class="helper-text invalid"
           v-if="$v.name.$dirty && !$v.name.required"
-        >Введите ваше имя</small>
+        >Введите имя</small>
         <small 
           class="helper-text invalid"
           v-else-if="$v.name.$dirty && !$v.name.minLength"
         >Имя не должно быть менее {{$v.name.$params.minLength.min}} символов</small>
+      </div>
+      <div class="input-field">
+        <input
+          v-model.trim="role"
+          id="role"
+          type="text"
+          class="inp"
+          :class="{invalid: ($v.role.$dirty && !$v.role.required) || ($v.role.$dirty && !$v.role.minLength)}"
+        >
+        <label class="black-text" for="name">Должность</label>
+        <small 
+          class="helper-text invalid"
+          v-if="$v.role.$dirty && !$v.role.required"
+        >Введите должность</small>
+        <small 
+          class="helper-text invalid"
+          v-else-if="$v.role.$dirty && !$v.role.minLength"
+        >Должность не должна быть менее {{$v.role.$params.minLength.min}} символов</small>
       </div>
       <p>
         <label>
@@ -64,7 +82,7 @@
             v-model="agree"
             type="checkbox"
           />
-          <span class="privacy-agree">С правилами согласен</span>
+          <span class="privacy-agree">Пользовательское соглашение</span>
         </label>
       </p>
     </div>
@@ -74,15 +92,15 @@
           class="btn waves-effect waves-light auth-submit"
           type="submit"
         >
-          Зарегистрироваться
+          Зарегистрировать
           <i class="material-icons right">send</i>
         </button>
       </div>
 
-      <p class="center">
+      <!-- <p class="center">
         Уже есть аккаунт?
         <router-link to="/login">Войти</router-link>
-      </p>
+      </p> -->
     </div>
   </form>
 </template>
@@ -100,6 +118,7 @@ export default {
     email: '',
     password: '',
     name: '',
+    role: '',
     agree: false
   }),
   validations: {
@@ -112,6 +131,10 @@ export default {
       required
     },
     name: {
+      minLength: minLength(2),
+      required
+    },
+    role: {
       minLength: minLength(2),
       required
     },
@@ -134,7 +157,8 @@ export default {
       const formData = {
         email: this.email,
         password: this.password,
-        name: this.name
+        name: this.name,
+        role: this.role
       }
 
       try {

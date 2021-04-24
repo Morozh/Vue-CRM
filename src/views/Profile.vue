@@ -19,6 +19,20 @@
           v-if="$v.name.$dirty && !$v.name.required"
         >Поле Имя должно быть корректным</small>
       </div>
+      <div class="input-field">
+        <input
+          v-model.trim="role"
+          id="description"
+          type="text"
+          class="inp inp-purple"
+          :class="{invalid: ($v.role.$dirty && !$v.role.required) || ($v.role.$dirty && !$v.role.minLength)}"
+        >
+        <label for="description" class="purple-text">Должность</label>
+        <small 
+          class="helper-text invalid"
+          v-if="$v.role.$dirty && !$v.role.required"
+        >Поле Должность должно быть корректным</small>
+      </div>
 
       <button class="btn waves-effect waves-light" type="submit">
         Обновить
@@ -37,13 +51,17 @@ export default {
     title: 'Профиль'
   },
   data: () => ({
-    name: ''
+    name: '',
+    role: ''
   }),
   validations: {
     name: {
       minLength: minLength(2),
       required
     },
+    role: {
+      minLength: minLength(2)
+    }
   },
   methods: {
     async submitHandler() {
@@ -53,7 +71,8 @@ export default {
       }
 
       const formData = {
-        name: this.name
+        name: this.name,
+        role: this.role
       }
 
       try {

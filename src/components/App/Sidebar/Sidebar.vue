@@ -105,7 +105,7 @@ export default {
     bottom: 20px;
     font-family: 'Roboto Medium', sans-serif;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 11px;
     color: #FFF;
     text-align: center;
   }

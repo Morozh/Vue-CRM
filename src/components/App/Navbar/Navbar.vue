@@ -12,11 +12,28 @@
         <li>
           <a
             ref="dropdown"
-            class="dropdown-trigger black-text"
+            class="dropdown-trigger black-text user-dropdown"
             href="#"
             data-target="dropdown"
           >
-            {{name}}
+            <div class="user-img">
+              <img 
+                v-if="name === 'Руслан'"
+                class="user-img__img" 
+                src="@/assets/img/useravatar.png" 
+                alt="Аватар" 
+              />
+              <img 
+                v-else
+                class="user-img__img" 
+                src="@/assets/img/avatar.png" 
+                alt="Аватар" 
+              />
+            </div>
+            <div class="user-info">
+              <span class="user-info__text">{{name}}</span>
+              <span class="user-info__text user-info__text_big text-gray">{{role}}</span>
+            </div>
             <i class="material-icons right">arrow_drop_down</i>
           </a>
 
@@ -54,8 +71,14 @@ export default {
   },
   computed: {
     name() {
-      return this.$store.getters.info.name
+      return this.$store.getters.info.name;
+    },
+    role() {
+      return this.$store.getters.info.role;
     }
+    // profileImage() {
+    //   return this.$store.getters.info.img;
+    // }
   },
   mounted() {
     this.interval = setInterval(() => {
@@ -78,5 +101,56 @@ export default {
   .navbar-timer {
     font-family: 'Roboto Medium', sans-serif !important;
     font-weight: 500;
+  }
+
+  .user-dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(232px, 232px);
+  }
+
+  .user-img {
+    min-width: 48px;
+    max-width: 48px;
+    height: min(48px, 48px);
+    background-color: #eeeeee;
+    border-radius: 50%;
+    margin: 0 12px 0 0;
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid #eeeeee;
+
+    &__img {
+      object-fit: cover;
+    }
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    padding: 6px 0;
+
+    &__text {
+      line-height: 16px;
+
+      &_big {
+        font-family: 'Roboto Medium', sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        margin: 6px 0 0 0;
+      }
+    }
+  }
+
+  .dropdown-content {
+    top: 67px !important;
+    width: 232px !important;
+  }
+
+  .text-gray {
+    color: #adadad;
   }
 </style>
