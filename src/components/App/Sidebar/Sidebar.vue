@@ -53,6 +53,7 @@ export default {
   .sidenav {
     z-index: 1001 !important;
     top: 0 !important;
+    position: fixed !important;
     padding-top: 0 !important;
     background-color: #8e24aa !important;
     box-shadow: unset !important;

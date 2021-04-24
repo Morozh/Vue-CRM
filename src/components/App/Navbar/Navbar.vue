@@ -98,6 +98,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .navbar {
+    position: fixed !important;
+  }
+
   .navbar-timer {
     font-family: 'Roboto Medium', sans-serif !important;
     font-weight: 500;
