@@ -2,7 +2,10 @@
   <div>
     <loader v-if="loading" />
     <div class="app-main-layout" v-else>
-      <navbar @click="isOpen = !isOpen" />
+      <navbar 
+        @click="isOpen = !isOpen"
+        :class="{'sidenav-closed' : isOpen === false}"
+      />
 
       <sidebar v-model="isOpen" />
 
@@ -54,3 +57,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .sidenav-closed {
+    padding: 0 2rem !important;
+    transition: all .3s ease;
+  }
+</style>

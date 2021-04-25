@@ -21,6 +21,9 @@
             </a>
           </div>
         </div>
+        <div class="projects-item__project-status projects-item__project-status_red">
+          <span>Завершен</span>
+        </div>
       </div>
 
       <div class="projects-item">
@@ -37,6 +40,9 @@
               <span class="projects-item__link-text">Перейти</span>
             </a>
           </div>
+        </div>
+        <div class="projects-item__project-status projects-item__project-status_green">
+          <span>В работе</span>
         </div>
       </div>
 
@@ -57,6 +63,9 @@
             </a>
           </div>
         </div>
+        <div class="projects-item__project-status projects-item__project-status_green">
+          <span>В работе</span>
+        </div>
       </div>
 
       <div class="projects-item">
@@ -76,6 +85,9 @@
             </a>
           </div>
         </div>
+        <div class="projects-item__project-status projects-item__project-status_green">
+          <span>В работе</span>
+        </div>
       </div>
 
       <div class="projects-item">
@@ -94,6 +106,9 @@
             </a>
           </div>
         </div>
+        <div class="projects-item__project-status projects-item__project-status_green">
+          <span>В работе</span>
+        </div>
       </div>
 
       <div class="projects-item">
@@ -110,6 +125,9 @@
               <span class="projects-item__link-text">Перейти</span>
             </a>
           </div>
+        </div>
+        <div class="projects-item__project-status projects-item__project-status_green">
+          <span>В работе</span>
         </div>
       </div>
 
@@ -129,6 +147,9 @@
               <span class="projects-item__link-text">Перейти</span>
             </a>
           </div>
+        </div>
+        <div class="projects-item__project-status projects-item__project-status_red">
+          <span>Завершен</span>
         </div>
       </div>
     </section>
@@ -154,7 +175,16 @@ export default {
     height: 200px;
     max-height: 200px;
     border-radius: 8px;
-    box-shadow: 0 10px 20px rgb(0 0 0 / 4%), 0 2px 6px rgb(0 0 0 / 4%), 0 0 1px rgb(0 0 0 / 4%);
+    border: 1px solid #e9e7e7;
+    // box-shadow: 0 10px 20px rgb(0 0 0 / 4%), 0 2px 6px rgb(0 0 0 / 4%), 0 0 1px rgb(0 0 0 / 4%);
+    overflow: hidden;
+    position: relative;
+    transition: all .3s ease;
+
+    // &:hover {
+    //   box-shadow: unset;
+    //   border-color:#8e24aa;
+    // }
 
     &__row {
       display: flex;
@@ -189,7 +219,7 @@ export default {
       font-family: 'Roboto Bold', sans-serif;
       color: rgb(39, 39, 39);
       font-weight: 700;
-      font-size: 24px;
+      font-size: 22px;
       line-height: 36px;
     }
 
@@ -260,6 +290,36 @@ export default {
           }
         }
       }
+    }
+
+    &__project-status {
+      position: absolute;
+      top: 18px;
+      right: -38px;
+      padding: 12px 0;
+      width: min(150px, 150px);
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      transform: rotate(45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      box-shadow: 0 10px 20px rgb(0 0 0 / 4%), 0 2px 6px rgb(0 0 0 / 4%), 0 0 1px rgb(0 0 0 / 4%);
+
+      &_red {
+        background-color: #ec4444;
+      }
+
+      &_green {
+        background-color: #4fdd2b;
+      }
+
+      // &_yellow {
+      //   background-color: #fff12e;
+      // }
     }
   }
 </style>

@@ -100,6 +100,7 @@ export default {
 <style lang="scss" scoped>
   .navbar {
     position: fixed !important;
+    transition: all .3s ease;
   }
 
   .navbar-timer {
