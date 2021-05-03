@@ -36,7 +36,7 @@ export default {
   color: #000;
 }
 
-a {
+a, strong {
   font-family: 'Roboto Medium', sans-serif !important;
   font-size: 16px !important;
   font-style: normal;
