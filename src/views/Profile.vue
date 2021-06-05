@@ -77,7 +77,7 @@ export default {
 
       try {
         await this.$store.dispatch('updateInfo', formData);
-        this.$message(`Вы успешно обновили имя`);
+        this.$message(`Вы успешно обновили личную информацию`);
       } catch(e) {
         console.log(e);
         throw e;
