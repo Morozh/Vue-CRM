@@ -1,24 +1,24 @@
-# vue-crm-project
+# Корпоративный web-портал с элементами CRM системы
 
-## Project setup
+## Установка проекта
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Компилирование и работа с проектом в режиме реального времени
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Компилирование и сжатие файлов для выпуска в продакшн
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Линтер и устранение ошибок
 ```
 npm run lint
 ```
 
-### Customize configuration
+### Настройка конфигурации vue-cli
 See [Configuration Reference](https://cli.vuejs.org/config/).
