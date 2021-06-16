@@ -4,21 +4,19 @@
 ```
 npm install
 ```
-
 ### Компилирование и работа с проектом в режиме реального времени
 ```
 npm run serve
 ```
-
-### Компилирование и сжатие файлов для выпуска в продакшн
+### Сжатие файлов для выпуска в продакшн
 ```
 npm run build
 ```
 
-### Линтер и устранение ошибок
-```
-npm run lint
-```
-
 ### Настройка конфигурации vue-cli
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Подробнее [ссылка на конфигурацию](https://cli.vuejs.org/config/).
+
+### Документация к серверной составляющей
+Google Firebase [ссылка на документацию](https://firebase.google.com/docs?hl=uk)
+
+© Galago Digital 2021.
