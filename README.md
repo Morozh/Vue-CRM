@@ -1,5 +1,7 @@
 # Корпоративный web-портал с элементами CRM системы
 
+**Ссылка на проект в открытом доступе: https://vue-crm-galago.web.app/login?message=login**
+
 ## Установка проекта
 ```
 npm install
