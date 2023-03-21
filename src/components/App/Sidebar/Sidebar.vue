@@ -13,25 +13,17 @@
       class="sidebar-link"
     >
       <a href="#" class="pointer">
-        <!-- <icon-arrow 
-          class="sidebar-link__img"
-          :color="`#fff`"
-        /> -->
         <span>{{link.title}}</span>
       </a>
     </router-link>
-    <div class="sidenav-copy">© Galago Design 2021. Все права защищены.</div>
+    <div class="sidenav-copy">© Galago Design 2023. Все права защищены.</div>
   </ul>
 </template>
 
 <script>
-// import IconArrow from '@/components/UI/Icons/IconArrow'
 
 export default {
   props: ['value'],
-  components: {
-    // IconArrow
-  },
   data: () => ({
     links: [
       {title: 'Счет', url: '/', exact: true},
@@ -42,8 +34,7 @@ export default {
       {title: 'Проекты', url: '/projects'},
       {title: 'Документация', url: '/documentation'},
       {title: 'Сотрудники', url: '/employee'},
-      {title: 'О системе', url: '/about'},
-      // {title: 'Календарь', url: '/10'},
+      {title: 'О системе', url: '/about'}
     ]
   })
 }

@@ -23,4 +23,4 @@ npm run build
 ### Документация к серверной составляющей
 Google Firebase [ссылка на документацию](https://firebase.google.com/docs?hl=uk)
 
-© Galago Digital 2021.
+© Galago Digital 2023.
